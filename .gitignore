@@ -21,3 +21,4 @@
 .gitattributes
 
 .gradle/
+/bin/
