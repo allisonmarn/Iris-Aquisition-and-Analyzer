@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="825.0" prefWidth="1029.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="1031.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Open..." />
+              <MenuItem mnemonicParsing="false" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Tools">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Instrument Configuration" />
+                  <MenuItem mnemonicParsing="false" text="Preferences" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane layoutX="13.0" layoutY="43.0" prefHeight="768.0" prefWidth="1012.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Chip Setup">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+          <Tab text="Acquisition View">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollBar layoutX="130.0" layoutY="386.0" prefHeight="27.0" prefWidth="446.0">
+                           <cursor>
+                              <Cursor fx:constant="MOVE" />
+                           </cursor>
+                        </ScrollBar>
+                        <LineChart createSymbols="false" horizontalGridLinesVisible="false" layoutX="40.0" layoutY="451.0" legendSide="RIGHT" prefHeight="274.0" prefWidth="478.0" title="Traces" verticalGridLinesVisible="false">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <Group />
+                        <Canvas id="MainCanvas" height="362.0" layoutX="86.0" layoutY="24.0" width="534.0" />
+                        <Slider layoutX="52.0" layoutY="144.0" orientation="VERTICAL" />
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="267.0" prefHeight="17.0" prefWidth="42.0" text="1x" />
+                        <Label alignment="CENTER" layoutX="35.0" layoutY="127.0" prefHeight="17.0" prefWidth="51.0" text="Zoom" />
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="145.0" prefHeight="17.0" prefWidth="42.0" text="8x" />
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="386.0" mnemonicParsing="false" style="-fx-font-style: normal;" text="First" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </Button>
+                        <ToggleButton layoutX="576.0" layoutY="386.0" mnemonicParsing="false" text="Live" />
+                        <TableView layoutX="778.0" layoutY="93.0" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn prefWidth="59.0" text="Time" />
+                            <TableColumn prefWidth="140.0" text="Name" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="539.0" layoutY="413.0" text="00:05" />
+                        <Label layoutX="130.0" layoutY="413.0" text="Image number N" />
+                        <Label layoutX="417.0" layoutY="413.0" text="Experiment time:" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Trace Analysis">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
