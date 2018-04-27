@@ -20,7 +20,13 @@ public class Main extends Application {
 		}
 	}
 	
+    public static String getGreeting() {
+        return "Hello world.";
+    }
+
+	
 	public static void main(String[] args) {
 		launch(args);
+		System.out.println(new application.Main().getGreeting());
 	}
 }
