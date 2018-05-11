@@ -4,7 +4,8 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-
+import mmcorej.*;
+import org.json.*;
 
 public class Main extends Application {
 	@Override
@@ -24,9 +25,17 @@ public class Main extends Application {
         return "Hello world.";
     }
 
-	
+	public String MMCoreVersion(CMMCore core) {
+		String info = core.getVersionInfo();
+		return info;
+	}
+	//public void LoadCfg(String configfile){
+	//core.loadSystemConfiguration(configfile);
+	//}
+
 	public static void main(String[] args) {
 		launch(args);
-		System.out.println(new application.Main().getGreeting());
+		CMMCore core = new CMMCore();
+		System.out.println(new application.Main().MMCoreVersion(core));
 	}
 }
